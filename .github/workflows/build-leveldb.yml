@@ -11,6 +11,11 @@ jobs:
         with:
           submodules: true
 
+      - name: Clone leveldb submodules
+        run: |
+          cd inc/leveldb
+          git submodule update --init --recursive
+
       - name: Install C/C++ requirements
         run: |
           sudo apt update
