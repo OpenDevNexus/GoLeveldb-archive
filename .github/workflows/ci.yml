@@ -1,0 +1,26 @@
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+
+      - name: Install C/C++ requirements
+        run: |
+          sudo apt update
+          sudo apt install -y gcc g++ libleveldb-dev
+
+      - name: Setup go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: 'go.mod'
+
+      - name: Run Tests
+        run: |
+          go test ./test/...
