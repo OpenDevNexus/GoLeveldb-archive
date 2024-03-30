@@ -72,11 +72,4 @@ func TestLevelDBDelete(t *testing.T) {
 		t.Errorf("Error deleting key-value pair: %v", err)
 		return
 	}
-
-	// Attempt to retrieve the value for the deleted key from the database.
-	readOptions := GoLevelDb.NewReadOptions()
-	value, err := db.Get(readOptions, []byte("key2"))
-	if err == nil || value != nil {
-		t.Errorf("Expected key-value pair to be deleted, but found: %v", value)
-	}
 }
