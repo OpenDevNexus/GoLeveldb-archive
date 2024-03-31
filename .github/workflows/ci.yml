@@ -14,7 +14,7 @@ jobs:
       - name: Install C/C++ requirements
         run: |
           sudo apt update
-          sudo apt install -y gcc g++ libleveldb-dev
+          sudo apt install -y gcc g++
 
       - name: Setup go
         uses: actions/setup-go@v5
