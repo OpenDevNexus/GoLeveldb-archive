@@ -12,7 +12,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 package GoLevelDb
 
 /*
-   #cgo CFLAGS: -I./inc/leveldb-compiled/leveldb/include
+   #cgo CFLAGS: -I./inc/leveldb-compiled/headers
    #cgo windows LDFLAGS: -L./inc/leveldb-compiled/lib-windows -lleveldb -lstdc++
    #cgo linux LDFLAGS: -L./inc/leveldb-compiled/lib-linux -lleveldb -lstdc++
    #include <stdlib.h>
