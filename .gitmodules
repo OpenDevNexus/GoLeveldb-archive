@@ -1,3 +1,0 @@
-[submodule "inc/leveldb-compiled"]
-	path = inc/leveldb-compiled
-	url = https://github.com/OpenDevNexus/leveldb-compiled
